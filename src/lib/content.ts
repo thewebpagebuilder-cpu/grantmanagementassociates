@@ -2660,6 +2660,17 @@ export type Resource = {
 
 export const resources: Resource[] = [
   {
+    slug: "/newsletters/weekly-funding-digest-aug-31-sept-4-2026",
+    title: "Weekly Funding Digest: Aug 31–Sept 4, 2026",
+    category: "Digest",
+    date: "2026-08-31",
+    readMinutes: 6,
+    author: "GMA Editorial Team",
+    excerpt: "Our comprehensive weekly breakdown of new federal, state, and foundational funding opportunities across key sectors.",
+    body: [],
+    tags: ["Funding", "Grants", "Policy"],
+  },
+  {
     slug: "/newsletters/weekly-funding-digest-aug-24-28-2026",
     title: "Weekly Funding Digest: Aug 24–28, 2026",
     category: "Digest",

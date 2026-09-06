@@ -60,6 +60,14 @@ export default async function HomePage() {
   const featuredStudies = caseStudies.slice(0, 4);
   const latestPosts = [
     {
+      slug: "/newsletters/weekly-funding-digest-aug-31-sept-4-2026",
+      category: "Digest",
+      title: "Weekly Funding Digest: Aug 31–Sept 4, 2026",
+      excerpt: "Our comprehensive weekly breakdown of new federal, state, and foundational funding opportunities across key sectors.",
+      date: "2026-08-31",
+      readMinutes: 6
+    },
+    {
       slug: "/newsletters/weekly-funding-digest-aug-24-28-2026",
       category: "Digest",
       title: "Weekly Funding Digest: Aug 24–28, 2026",
