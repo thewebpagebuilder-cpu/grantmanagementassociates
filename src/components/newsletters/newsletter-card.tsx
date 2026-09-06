@@ -121,7 +121,7 @@ export function NewsletterCard({ grant, isPolicy }: { grant: GrantData; isPolicy
         {grant["Program Focus"] && (
           <div className="prose prose-slate dark:prose-invert prose-sm max-w-none">
             <span className="font-semibold text-slate-900 dark:text-white block mb-1">Program Focus: </span>
-            <p className="leading-relaxed">{grant["Program Focus"]}</p>
+            <div className="leading-relaxed" dangerouslySetInnerHTML={{ __html: grant["Program Focus"] }} />
           </div>
         )}
         
