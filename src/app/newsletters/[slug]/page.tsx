@@ -148,35 +148,7 @@ export default async function NewsletterPage({ params }: { params: Promise<{ slu
             </div>
           </div>
 
-          {/* Related Articles / Digests */}
-          <div>
-            <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-slate-800 pb-4">
-              More from the Editorial Team
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { title: "Weekly Funding Digest", date: "August 10–14, 2026", type: "Digest" },
-                { title: "The Key Considerations Framework", date: "June 10, 2025", type: "Whitepaper" },
-                { title: "From Inspiration to Execution: The Next Step After Fed Supernova", date: "August 27, 2025", type: "Insight" }
-              ].map((item, idx) => (
-                <div key={idx} className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
-                  <div className="p-6 flex-1 flex flex-col">
-                    <div className="text-xs font-semibold tracking-widest uppercase text-emerald-600 dark:text-emerald-500 mb-3">
-                      {item.type}
-                    </div>
-                    <h4 className="text-lg font-display font-bold text-slate-900 dark:text-white mb-4 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                      {item.title}
-                    </h4>
-                    <div className="mt-auto pt-4 flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800/50">
-                      <span>{item.date}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
+
         </div>
       </div>
     </main>

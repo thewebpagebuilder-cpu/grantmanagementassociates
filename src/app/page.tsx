@@ -83,7 +83,7 @@ export default async function HomePage() {
       date: "2026-08-17",
       readMinutes: 5
     },
-    ...resources.slice(2, 3).map(r => ({
+    ...resources.slice(3, 4).map(r => ({
       slug: `/resources/${r.slug}`,
       category: r.category,
       title: r.title,
