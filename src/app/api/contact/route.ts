@@ -31,8 +31,9 @@ export async function POST(req: Request) {
       .returning({ id: contactSubmissions.id });
     return NextResponse.json({ ok: true, id: row.id });
   } catch (err) {
+    console.error("Database insert error:", err);
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Unknown error" },
+      { error: err instanceof Error ? `${err.message} - ${err.cause || ''}` : "Unknown error", detail: err },
       { status: 500 }
     );
   }
