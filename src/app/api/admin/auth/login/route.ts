@@ -6,12 +6,12 @@ import { createAdminSession, verifyPassword } from "@/lib/admin-auth";
 
 export async function POST(req: Request) {
   const { email, password } = await req.json();
-  if (
-    email === process.env.ADMIN_EMAIL &&
-    password === process.env.ADMIN_PASSWORD
-  ) {
-    await createAdminSession(1);
-    return NextResponse.json({ ok: true });
+  if (!email || !password) return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
+  const rows = await db.select().from(adminUsers).where(eq(adminUsers.email, email.toLowerCase().trim())).limit(1);
+  const user = rows[0];
+  if (!user || !user.active || !verifyPassword(password, user.passwordHash)) {
+    return NextResponse.json({ error: "Invalid email or password." }, { status: 401 });
   }
-  return NextResponse.json({ error: "Invalid email or password." }, { status: 401 });
+  await createAdminSession(user.id);
+  return NextResponse.json({ ok: true });
 }

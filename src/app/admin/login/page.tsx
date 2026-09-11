@@ -30,7 +30,7 @@ export default function AdminLoginPage() {
         {setup === null ? <div className="mt-8 text-sm text-slate-500">Checking installation…</div> : <form onSubmit={submit} className="mt-8 space-y-5">
           {setup && <Field name="name" label="Full name" />}
           <Field name="email" label="Email address" type="email" />
-          <Field name="password" label="Password" type="password" hint={setup ? "Minimum 12 characters" : undefined} />
+          <Field name="password" label="Password" type="password" hint={setup ? "Minimum 6 characters" : undefined} />
           {error && <p role="alert" className="text-sm text-red-700 bg-red-50 border border-red-200 rounded p-3">{error}</p>}
           <button disabled={loading} className="w-full rounded-md bg-[#18243a] text-white px-4 py-3 text-sm font-medium hover:bg-[#22314d] disabled:opacity-50">{loading ? "Please wait…" : setup ? "Create owner account" : "Sign in"}</button>
         </form>}
@@ -39,4 +39,4 @@ export default function AdminLoginPage() {
     </section>
   </main>;
 }
-function Field({ name, label, type = "text", hint }: { name: string; label: string; type?: string; hint?: string }) { return <label className="block"><span className="text-sm font-medium text-slate-700">{label}</span><input name={name} type={type} required minLength={type === "password" ? 12 : undefined} className="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100" />{hint && <span className="mt-1 block text-xs text-slate-400">{hint}</span>}</label>; }
+function Field({ name, label, type = "text", hint }: { name: string; label: string; type?: string; hint?: string }) { return <label className="block"><span className="text-sm font-medium text-slate-700">{label}</span><input name={name} type={type} required minLength={type === "password" ? 6 : undefined} className="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-100" />{hint && <span className="mt-1 block text-xs text-slate-400">{hint}</span>}</label>; }
