@@ -93,25 +93,25 @@ export function NewsletterCard({ grant, isPolicy }: { grant: GrantData; isPolicy
         {grant["Total Funding"] && (
           <div>
             <span className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Total Funding</span>
-            <span className="text-sm text-slate-900 dark:text-slate-200">{grant["Total Funding"]}</span>
+            <span className="text-sm text-slate-900 dark:text-slate-200 block [&_p]:inline" dangerouslySetInnerHTML={{ __html: grant["Total Funding"] }} />
           </div>
         )}
         {grant["Award Range"] && (
           <div>
             <span className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Award Range</span>
-            <span className="text-sm text-slate-900 dark:text-slate-200">{grant["Award Range"]}</span>
+            <span className="text-sm text-slate-900 dark:text-slate-200 block [&_p]:inline" dangerouslySetInnerHTML={{ __html: grant["Award Range"] }} />
           </div>
         )}
         {(grant["Deadline"] || grant["Posting Date"]) && (
           <div>
             <span className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Timeline</span>
-            <span className="text-sm text-slate-900 dark:text-slate-200">{grant["Deadline"] || grant["Posting Date"]}</span>
+            <span className="text-sm text-slate-900 dark:text-slate-200 block [&_p]:inline" dangerouslySetInnerHTML={{ __html: grant["Deadline"] || grant["Posting Date"] || "" }} />
           </div>
         )}
         {grant["Cost Share / Match"] && (
           <div>
             <span className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Cost Share</span>
-            <span className="text-sm text-slate-900 dark:text-slate-200">{grant["Cost Share / Match"]}</span>
+            <span className="text-sm text-slate-900 dark:text-slate-200 block [&_p]:inline" dangerouslySetInnerHTML={{ __html: grant["Cost Share / Match"] }} />
           </div>
         )}
       </div>
@@ -127,8 +127,8 @@ export function NewsletterCard({ grant, isPolicy }: { grant: GrantData; isPolicy
         
         {grant["Eligible Applicants"] && (
           <div className="pt-2 border-t border-slate-100 dark:border-slate-800/50 mt-4">
-            <span className="font-semibold text-slate-900 dark:text-white">Eligible Applicants: </span>
-            <span className="leading-relaxed">{grant["Eligible Applicants"]}</span>
+            <span className="font-semibold text-slate-900 dark:text-white block mb-1">Eligible Applicants: </span>
+            <div className="leading-relaxed prose prose-slate dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: grant["Eligible Applicants"] }} />
           </div>
         )}
       </div>
