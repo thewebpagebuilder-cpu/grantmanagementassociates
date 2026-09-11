@@ -1,4 +1,5 @@
 import Link from "next/link";
+export const dynamic = "force-dynamic";
 import { db } from "@/db";
 import { contactSubmissions,assessmentResponses,adminUsers,jobApplications } from "@/db/schema";
 import { desc,eq } from "drizzle-orm";
