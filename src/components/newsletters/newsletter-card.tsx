@@ -182,28 +182,28 @@ function PolicyCard({ grant }: { grant: GrantData }) {
         {grant["What It Is"] && (
           <div>
             <span className="font-semibold text-slate-900 dark:text-white block mb-1">What It Is:</span>
-            <p className="leading-relaxed">{grant["What It Is"]}</p>
+            <div className="leading-relaxed prose prose-slate dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: grant["What It Is"] }} />
           </div>
         )}
         
         {grant["The Requirement That Shapes Scoping"] && (
           <div className="pt-3 border-t border-slate-200 dark:border-slate-700/50 mt-3">
             <span className="font-semibold text-slate-900 dark:text-white block mb-1">Impact on Scoping:</span>
-            <p className="leading-relaxed">{grant["The Requirement That Shapes Scoping"]}</p>
+            <div className="leading-relaxed prose prose-slate dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: grant["The Requirement That Shapes Scoping"] }} />
           </div>
         )}
         
         {grant["Program Context"] && (
           <div className="pt-3 border-t border-slate-200 dark:border-slate-700/50 mt-3">
             <span className="font-semibold text-slate-900 dark:text-white block mb-1">Program Context:</span>
-            <p className="leading-relaxed">{grant["Program Context"]}</p>
+            <div className="leading-relaxed prose prose-slate dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: grant["Program Context"] }} />
           </div>
         )}
 
         {grant["Allocation Breakdown"] && (
           <div className="pt-3 border-t border-slate-200 dark:border-slate-700/50 mt-3">
             <span className="font-semibold text-slate-900 dark:text-white block mb-1">Allocation Breakdown:</span>
-            <p className="leading-relaxed">{grant["Allocation Breakdown"]}</p>
+            <div className="leading-relaxed prose prose-slate dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: grant["Allocation Breakdown"] }} />
           </div>
         )}
       </div>
